@@ -4,6 +4,8 @@ if (!isset($_SESSION['username'])) {
     header('Location: login.php'); // Redirect to login page if user is not logged in
     exit();
 }
+
+$username = $_SESSION['username']; // Get the username from the session
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -108,7 +110,6 @@ if (!isset($_SESSION['username'])) {
                 <p>
                     To be the leading laundry service provider in the area, known for our exceptional customer service and attention to detail.
                 </p>
-                <h3>Contact Us</h3>
                 <p>
                 </p>
             </div>

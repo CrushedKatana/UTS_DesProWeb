@@ -8,12 +8,13 @@
 
 /* Global Theme */
 body {
-    background-color: var(--light-color);
+    background-color: var(--light-color); /* Set the background to light color */
     color: var(--dark-color);
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Ensures footer sticks to the bottom */
 }
+
 
 /* Navbar and Footer */
 .navbar, footer {

@@ -5,13 +5,23 @@ session_start();
 $valid_username = 'user';
 $valid_password = 'password';
 
-if ($_POST['username'] === $valid_username && $_POST['password'] === $valid_password) {
-    $_SESSION['username'] = $_POST['username'];
-    header('Location: home.php');
-    exit();
-} else {
-    echo "<script>alert('Invalid credentials!'); window.location.href='login.php';</script>";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Check credentials
+    if ($username === $valid_username && $password === $valid_password) {
+        $_SESSION['username'] = $username; // Store username in session
+        header('Location: home.php'); // Redirect to home
+        exit();
+    } else {
+        // Store the error message in a session variable to display on the login page
+        $_SESSION['error'] = "Invalid credentials!";
+        header('Location: login.php'); // Redirect back to login page
+        exit();
+    }
 }
 ?>
+
 
 
