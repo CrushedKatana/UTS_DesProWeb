@@ -1,0 +1,45 @@
+:root {
+    --dark-color: #17252a;
+    --primary-color: #2b7a78;
+    --secondary-color: #3aafa9;
+    --light-color: #def2f1;
+    --white-color: #feffff;
+}
+
+/* Global Theme */
+body {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+.navbar, footer {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+}
+
+.company-profile {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.login-container {
+    max-width: 400px;
+    margin-top: 100px;
+}
+
+.error-message {
+    color: red;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+button.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+}
