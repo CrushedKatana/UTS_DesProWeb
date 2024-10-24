@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['username'])) {
-    header('Location: login.html');
+    header('Location: login.php');
     exit();
 }
 ?>
@@ -10,11 +10,12 @@ if (!isset($_SESSION['username'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check Price - Laundry BerkahJaya</title>
+    <title>Check Price - Laundry Berkah Jaya</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <header class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">Laundry Service</a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
@@ -23,14 +24,14 @@ if (!isset($_SESSION['username'])) {
                 <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
             </ul>
         </div>
-    </nav>
+    </header>
 
     <div class="container my-4">
         <h2 class="text-center">Price Check</h2>
         <form id="priceForm">
             <div class="form-group">
                 <label for="weight">Weight (kg):</label>
-                <input type="number" class="form-control" id="weight" required>
+                <input type="number" class="form-control" id="weight" min="1" required>
             </div>
             <div class="form-group">
                 <label for="service">Service Type:</label>
@@ -64,6 +65,41 @@ if (!isset($_SESSION['username'])) {
         <h3 class="text-center my-4" id="totalPrice"></h3>
     </div>
 
-    <script src="price_check.js"></script>
+    <footer>
+        <p>Location: Jl. Laundry No. 123, Jakarta</p>
+        <p>Phone: (021) 123-4567</p>
+    </footer>
+
+    <script>
+        function calculatePrice() {
+            let weight = parseInt(document.getElementById('weight').value);
+            if (isNaN(weight) || weight < 1) {
+                alert('Please enter a valid weight.');
+                return;
+            }
+
+            let service = document.getElementById('service').value;
+            let type = document.getElementById('type').value;
+            let membership = document.getElementById('membership').value;
+
+            let pricePerKg = service === 'wash_dry' ? 10000 : service === 'wash_ironing' ? 15000 : 12000;
+            if (type === 'express') {
+                pricePerKg *= 1.5; // 50% more for express service
+            }
+            let totalPrice = weight * pricePerKg;
+
+            if (membership === 'member') {
+                totalPrice *= 0.9; // 10% discount for members
+            }
+
+            if (document.getElementById('coupon').checked) {
+                totalPrice -= 20000; // 20,000 discount if coupon is used
+            }
+
+            document.getElementById('totalPrice').textContent = `Total Price: Rp ${totalPrice.toLocaleString()}`;
+        }
+    </script>
 </body>
 </html>
+
+

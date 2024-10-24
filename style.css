@@ -1,22 +1,39 @@
 :root {
-    --dark-color: #17252a;
-    --primary-color: #2b7a78;
-    --secondary-color: #3aafa9;
-    --light-color: #def2f1;
-    --white-color: #feffff;
+    --dark-color: #17252a; /* Dark Color */
+    --primary-color: #2b7a78; /* Primary Color */
+    --secondary-color: #3aafa9; /* Secondary Color */
+    --light-color: #def2f1; /* Light Color */
+    --white-color: #feffff; /* White Color */
 }
 
 /* Global Theme */
 body {
     background-color: var(--light-color);
     color: var(--dark-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures footer sticks to the bottom */
 }
 
+/* Navbar and Footer */
 .navbar, footer {
     background-color: var(--dark-color);
     color: var(--white-color);
 }
 
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+/* Banner */
+.banner {
+    height: 300px;
+    background-size: cover;
+}
+
+/* Company Profile */
 .company-profile {
     background-color: var(--primary-color);
     color: var(--white-color);
@@ -25,21 +42,21 @@ body {
     margin: 20px 0;
 }
 
+/* Login Container */
 .login-container {
     max-width: 400px;
-    margin-top: 100px;
+    margin: 100px auto; /* Centers the login form */
 }
 
+/* Error Messages */
 .error-message {
     color: red;
 }
 
-footer {
-    text-align: center;
-    padding: 20px 0;
-}
-
+/* Buttons */
 button.btn-primary {
     background-color: var(--primary-color);
     border: none;
 }
+
+
