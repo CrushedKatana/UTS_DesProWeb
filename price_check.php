@@ -12,52 +12,50 @@ if (!isset($_SESSION['username'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Laundry Berkah Jaya - price_check</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS --> 
+    <link rel="stylesheet" href="style.css"> 
     <style>
         .banner {
             height: 300px;
             background-size: cover;
         }
         .company-profile {
-            background-color: #2b7a78; /* Example background color */
-            color: #feffff; /* Example text color */
+            background-color: #2b7a78; 
+            color: #feffff;
             padding: 20px;
             border-radius: 10px;
             margin: 20px 0;
         }
-        /* Footer styles */
         footer {
-            background-color: #17252a; /* Dark color for footer */
-            color: #feffff; /* Light text color */
+            background-color: #17252a; 
+            color: #feffff;
             text-align: center;
             padding: 10px 0;
             position: relative;
             bottom: 0;
             width: 100%;
         }
-        /* Flexbox for body */
         html, body {
             height: 100%;
-            margin: 0; /* Remove default body margin */
-            padding: 0; /* Remove default body padding */
+            margin: 0; 
+            padding: 0; 
         }
         .wrapper {
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Full height to the viewport */
+            min-height: 100vh; 
         }
         .content {
-            flex: 1; /* Takes the available space */
+            flex: 1; 
         }
         .navbar {
-            background-color: #17252a; /* Dark color for navbar */
+            background-color: #17252a;
         }
         .navbar-brand, .nav-link {
-            color: #feffff; /* Light color for text */
+            color: #feffff; 
         }
         .container {
-            padding-left: 0; /* Remove left padding */
-            padding-right: 0; /* Remove right padding */
+            padding-left: 0; 
+            padding-right: 0; 
         }
     </style>
 </head>
@@ -133,16 +131,16 @@ if (!isset($_SESSION['username'])) {
 
             let pricePerKg = service === 'wash_dry' ? 10000 : service === 'wash_ironing' ? 15000 : 12000;
             if (type === 'express') {
-                pricePerKg *= 1.5; // 50% more for express service
+                pricePerKg *= 1.5;
             }
             let totalPrice = weight * pricePerKg;
 
             if (membership === 'member') {
-                totalPrice *= 0.9; // 10% discount for members
+                totalPrice *= 0.9; 
             }
 
             if (document.getElementById('coupon').checked) {
-                totalPrice -= 20000; // 20,000 discount if coupon is used
+                totalPrice -= 20000;
             }
 
             document.getElementById('totalPrice').textContent = `Total Price: Rp ${totalPrice.toLocaleString()}`;

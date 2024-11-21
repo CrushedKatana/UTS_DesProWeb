@@ -12,45 +12,45 @@
             background-size: cover;
         }
         .company-profile {
-            background-color: #2b7a78; /* Example background color */
-            color: #feffff; /* Example text color */
+            background-color: #2b7a78; 
+            color: #feffff; 
             padding: 20px;
             border-radius: 10px;
             margin: 20px 0;
         }
         /* Footer styles */
         footer {
-            background-color: #17252a; /* Dark color for footer */
-            color: #feffff; /* Light text color */
+            background-color: #17252a; 
+            color: #feffff; 
             text-align: center;
             padding: 10px 0;
             position: relative;
             bottom: 0;
             width: 100%;
         }
-        /* Flexbox for body */
+
         html, body {
             height: 100%;
-            margin: 0; /* Remove default body margin */
-            padding: 0; /* Remove default body padding */
+            margin: 0; 
+            padding: 0;
         }
         .wrapper {
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Full height to the viewport */
+            min-height: 100vh; 
         }
         .content {
-            flex: 1; /* Takes the available space */
+            flex: 1; 
         }
         .navbar {
-            background-color: #17252a; /* Dark color for navbar */
+            background-color: #17252a; 
         }
         .navbar-brand, .nav-link {
-            color: #feffff; /* Light color for text */
+            color: #feffff; 
         }
         .container {
-            padding-left: 0; /* Remove left padding */
-            padding-right: 0; /* Remove right padding */
+            padding-left: 0; 
+            padding-right: 0; 
         }
     </style>
 </head>

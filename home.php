@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['username'])) {
-    header('Location: login.php'); // Redirect to login page if user is not logged in
+    header('Location: login.php'); 
     exit();
 }
 
@@ -40,26 +40,26 @@ $username = $_SESSION['username']; // Get the username from the session
         /* Flexbox for body */
         html, body {
             height: 100%;
-            margin: 0; /* Remove default body margin */
-            padding: 0; /* Remove default body padding */
+            margin: 0;
+            padding: 0;
         }
         .wrapper {
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Full height to the viewport */
+            min-height: 100vh;
         }
         .content {
-            flex: 1; /* Takes the available space */
+            flex: 1;
         }
         .navbar {
-            background-color: #17252a; /* Dark color for navbar */
+            background-color: #17252a; 
         }
         .navbar-brand, .nav-link {
-            color: #feffff; /* Light color for text */
+            color: #feffff; 
         }
         .container {
-            padding-left: 0; /* Remove left padding */
-            padding-right: 0; /* Remove right padding */
+            padding-left: 0;
+            padding-right: 0;
         }
     </style>
 </head>
