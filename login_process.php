@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-$valid_username = 'user';
-$valid_password = 'password';
+$valid_username = 'Charel';
+$valid_password = '241204';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];

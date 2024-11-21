@@ -5,7 +5,7 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-$username = $_SESSION['username']; // Get the username from the session
+$username = $_SESSION['username']; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,23 +21,23 @@ $username = $_SESSION['username']; // Get the username from the session
             background-size: cover;
         }
         .company-profile {
-            background-color: #2b7a78; /* Example background color */
-            color: #feffff; /* Example text color */
+            background-color: #2b7a78; 
+            color: #feffff; 
             padding: 20px;
             border-radius: 10px;
             margin: 20px 0;
         }
-        /* Footer styles */
+       
         footer {
-            background-color: #17252a; /* Dark color for footer */
-            color: #feffff; /* Light text color */
+            background-color: #17252a;
+            color: #feffff; 
             text-align: center;
             padding: 10px 0;
             position: relative;
             bottom: 0;
             width: 100%;
         }
-        /* Flexbox for body */
+        
         html, body {
             height: 100%;
             margin: 0;
@@ -76,7 +76,7 @@ $username = $_SESSION['username']; // Get the username from the session
             </div>
         </nav>
 
-        <div class="content container-fluid"> <!-- Use container-fluid for full width -->
+        <div class="content container-fluid"> 
             <h1 class="text-center my-4">Welcome to Laundry Berkah Jaya</h1>
             <div id="bannerSlider" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -98,7 +98,7 @@ $username = $_SESSION['username']; // Get the username from the session
                 </a>
             </div>
 
-            <!-- Company Profile Section -->
+           
             <div class="company-profile">
                 <h2 class="text-center">About Us</h2>
                 <p>
